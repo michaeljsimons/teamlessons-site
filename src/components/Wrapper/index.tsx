@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 
 interface WrapperProps {
   children: ReactNode;
-  classname: string;
+  classname?: string;
 }
 
 const Wrapper: React.FC<WrapperProps> = ({ children, classname }) => {
