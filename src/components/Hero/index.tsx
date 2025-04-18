@@ -7,7 +7,7 @@ const Hero = () => {
     <Wrapper classname="flex flex-row min-h-200 justify-center items-center px-16 py-20">
       <div className="max-w-2xl">
         <p className="font-bold text-6xl leading-tight">
-          The Easiest Way to Keep Lessons Learned in Front of Your Team in{' '}
+          Lessons Learned. Shared Where Work Happens — in{' '}
           <span className="text-secondary">Teams</span>
         </p>
       </div>
