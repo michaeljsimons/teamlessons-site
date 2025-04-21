@@ -1,24 +1,25 @@
 import React from 'react';
 import Wrapper from '../Wrapper';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
     <div className="bg-secondary rounded-t-2xl flex flex-row py-8">
-      <Wrapper>
-        <p className="text-white text-sm sm:text-base md:text-lg font-semibold mb-6">TeamLessons</p>
+      <Wrapper classname="w-full">
+        <p className="text-white text-xl font-semibold mb-6">TeamLessons</p>
 
-        <div className="flex flex-row flex-wrap justify-between items-start gap-10 sm:gap-16 md:gap-24">
+        <div className="flex flex-col w-full gap-8 sm:gap-0 sm:flex-row flex-wrap justify-between items-start ">
           {/* Product */}
-          <ul className="flex flex-col gap-1 text-sm sm:text-base">
+          <ul className="flex flex-col gap-1 text-sm">
             <li>
-              <a href="#" className="text-secondary font-bold text-base sm:text-lg md:text-xl">
+              <Link href="/features" className="text-secondary font-bold">
                 Product
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="text-white">
+              <Link href="/features" className="text-white">
                 Features
-              </a>
+              </Link>
             </li>
             <li>
               <a href="#" className="text-white">
@@ -26,35 +27,35 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="#" className="text-white">
+              <Link href="/pricing" className="text-white">
                 Pricing
-              </a>
+              </Link>
             </li>
           </ul>
 
           {/* Company */}
-          <ul className="flex flex-col gap-1 text-sm sm:text-base">
+          <ul className="flex flex-col gap-1 text-sm">
             <li>
-              <a href="#" className="text-secondary font-bold text-base sm:text-lg md:text-xl">
+              <Link href="/about" className="text-secondary font-bold">
                 Company
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="text-white">
+              <Link href="/about" className="text-white">
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="text-white">
+              <Link href="/contact" className="text-white">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
 
           {/* Sales */}
-          <ul className="flex flex-col gap-1 text-sm sm:text-base">
+          <ul className="flex flex-col gap-1 text-sm">
             <li>
-              <a href="#" className="text-secondary font-bold text-base sm:text-lg md:text-xl">
+              <a href="#" className="text-secondary font-bold">
                 Sales
               </a>
             </li>
@@ -64,18 +65,18 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="#" className="text-white">
+              <Link href="/pricing" className="text-white">
                 Enterprise
-              </a>
+              </Link>
             </li>
           </ul>
 
           {/* Help */}
-          <ul className="flex flex-col gap-1 text-sm sm:text-base">
+          <ul className="flex flex-col gap-1 text-sm">
             <li>
-              <a href="#" className="text-secondary font-bold text-base sm:text-lg md:text-xl">
+              <Link href="/contact" className="text-secondary font-bold">
                 Help
-              </a>
+              </Link>
             </li>
             <li>
               <a href="#" className="text-white">
@@ -83,9 +84,9 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="#" className="text-white">
+              <Link href="/contact" className="text-white">
                 Support
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

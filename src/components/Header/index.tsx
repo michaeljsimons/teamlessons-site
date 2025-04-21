@@ -1,44 +1,104 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import Wrapper from '../Wrapper';
 import Button from '../ui/Button';
 
 const Header = () => {
-  return (
-    <div>
-      <Wrapper classname="flex items-center justify-between px-8 py-4">
-        <p className="font-bold text-3xl">
-          <span className="text-primary">Team</span>Lessons
-        </p>
+  const [menuOpen, setMenuOpen] = useState(false);
 
-        <nav>
+  const toggleMenu = () => {
+    setMenuOpen((prev) => !prev);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
+  return (
+    <header className="">
+      <Wrapper classname="flex items-center justify-between py-4">
+        <Link href="/" className="font-bold text-3xl">
+          Team<span className="text-primary">Lessons</span>
+        </Link>
+
+        {/* Desktop Menu */}
+        <nav className="hidden md:block">
           <ul className="flex space-x-8 items-center">
             <li>
-              <a href="#features" className="text-gray-700 hover:text-primary">
+              <Link href="/features" className="text-gray-700 hover:text-primary">
                 Features
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#pricing" className="text-gray-700 hover:text-primary">
+              <Link href="/pricing" className="text-gray-700 hover:text-primary">
                 Pricing
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#docs" className="text-gray-700 hover:text-primary">
+              <Link href="/docs" className="text-gray-700 hover:text-primary">
                 Docs
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#contact" className="text-gray-700 hover:text-primary">
+              <Link href="/contact" className="text-gray-700 hover:text-primary">
                 Contact
-              </a>
+              </Link>
             </li>
             <li>
-              <Button label="See a demo" />
+              <Link href="/demo">
+                <Button label="See a demo" />
+              </Link>
             </li>
           </ul>
         </nav>
+
+        {/* Hamburger Icon */}
+        <div className="md:hidden">
+          <button onClick={toggleMenu} aria-label="Toggle menu">
+            <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} size="lg" />
+          </button>
+        </div>
       </Wrapper>
-    </div>
+
+      {/* Mobile Slide-down Menu */}
+      <div
+        className={`md:hidden transition-all duration-300 overflow-hidden bg-white ${
+          menuOpen ? 'max-h-[500px]' : 'max-h-0'
+        }`}
+      >
+        <ul className="flex flex-col px-6 py-4 space-y-4 justify-center">
+          <li>
+            <Link href="/features" onClick={closeMenu}>
+              Features
+            </Link>
+          </li>
+          <li>
+            <Link href="/pricing" onClick={closeMenu}>
+              Pricing
+            </Link>
+          </li>
+          <li>
+            <Link href="/docs" onClick={closeMenu}>
+              Docs
+            </Link>
+          </li>
+          <li>
+            <Link href="/contact" onClick={closeMenu}>
+              Contact
+            </Link>
+          </li>
+          <li>
+            <Link href="/demo" onClick={closeMenu}>
+              <Button label="See a demo" fullwidth />
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </header>
   );
 };
 
