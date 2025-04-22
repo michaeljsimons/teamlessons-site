@@ -19,7 +19,7 @@ const Header = () => {
   };
 
   return (
-    <header className="">
+    <header className="bg-white rounded-b-2xl px-8 shadow-[0_4px_20px_rgba(94,43,255,0.2)]">
       <Wrapper classname="flex items-center justify-between py-4">
         <Link href="/" className="font-bold text-3xl">
           Team<span className="text-primary">Lessons</span>

@@ -1,49 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 @import "tailwindcss";
 
+@theme {
 
+  /* Brand Palette */
+  --color-primary: #5E2BFF;
+  --color-secondary: #9381FF;
 
+  /* Text Palette */
+  --color-text-primary: #2D2D2D;       /* Main text color */
+  --color-text-secondary: #9381FF;     /* Secondary text, e.g., links or muted text */
+  --color-text-cta: #5E2BFF;          /* Muted text, for less emphasis */
+  --color-text-light: #ffffff;         /* Light text color */
+  --color-text-dark: #1A1A1A;          /* Dark text color, for deep contrast */
 
-:root {
-  --primary-color: #5E2BFF;  
-  --secondary-color: #9381FF;
-  --background: #ffffff;
-  --foreground: #2D2D2D;
-  --text-default: #2D2D2D;    
+  /* Background Palette */
+  --color-background: #ffffff;         /* Page background */
+  --color-foreground: #2D2D2D;         /* Background for elements like sidebars */
+  --color-surface: #F6F6F6;            /* Lighter background for cards, modals, etc. */
+
+  /* Border Palette */
+  --color-border-light: #E0E0E0;       /* Light border, e.g., card borders */
+  --color-border-dark: #CCCCCC;        /* Darker border, for more contrast */
+
+  /* State Colors */
+  --color-success: #4CAF50;            /* Green for success messages, buttons */
+  --color-warning: #FF9800;            /* Orange for warnings or alerts */
+  --color-error: #F44336;              /* Red for error messages or destructive actions */
+  --color-info: #2196F3;               /* Blue for informational messages */
+
+  /* Interaction States */
+  --color-hover: #5A1DFF;              /* Hover state for buttons, links, etc. */
+  --color-focus: #FFC107;              /* Focus state for input fields and elements */
+  --color-active: #3E8E41;             /* Active state for buttons, links */
+  
+  /* Shadows & Transparency */
+  --color-shadow-light: rgba(0, 0, 0, 0.1);  /* Light shadow */
+  --color-shadow-dark: rgba(0, 0, 0, 0.25);  /* Dark shadow */
 }
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: 'Inter', Arial, Helvetica, sans-serif; /* Corrected font-family */
-}
-
-.text-primary {
-  color: var(--primary-color);
-}
-
-.text-secondary {
-  color: var(--secondary-color);
-}
-
-.bg-primary {
-  background-color: var(--primary-color);
-}
-
-.bg-secondary {
-  background-color: var(--foreground)
 }

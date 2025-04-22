@@ -4,10 +4,8 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <div className="bg-secondary rounded-t-2xl flex flex-row py-8">
+    <div className="bg-gray-900 rounded-t-2xl flex flex-row py-12">
       <Wrapper classname="w-full">
-        <p className="text-white text-xl font-semibold mb-6">TeamLessons</p>
-
         <div className="flex flex-col w-full gap-8 sm:gap-0 sm:flex-row flex-wrap justify-between items-start ">
           {/* Product */}
           <ul className="flex flex-col gap-1 text-sm">
@@ -90,6 +88,9 @@ const Footer = () => {
             </li>
           </ul>
         </div>
+        <p className="text-white text-xl font-semibold mt-12">
+          Team<span className="text-primary">Lessons</span>
+        </p>
       </Wrapper>
     </div>
   );
