@@ -105,18 +105,18 @@ const Hero = () => {
         <Wrapper classname="flex flex-col items-center justify-center py-20">
           <div className="flex flex-col items-center justify-center gap-10 text-center lg:text-left">
             <p
-              className="text-text-cta font-bold text-3xl lg:text-6xl bg-white/80 px-6 py-4 rounded-2xl "
+              className="text-text-cta font-bold text-5xl md:text-6xl bg-white/80 rounded-2xl "
               style={{
                 textShadow: '0px 4px 50px rgba(147, 129, 255, 0.8)',
               }}
             >
               Capture what Matters in Teams
             </p>
-            <p className="text-text-primary text-xl lg:text-3xl w-3/4 text-center bg-white/80 px-6 py-4 rounded-2xl ">
-              Lessons learnt made visible, trackable, and actionable right inside Microsoft{' '}
-              <span className="font-bold text-text-secondary">Teams</span>
+            <p className="text-text-primary text-lg lg:text-3xl w-3/4 text-center bg-white/80 rounded-2xl ">
+              A smarter way to manage lessons learned—fully embedded in Microsoft 
+              <span className="font-bold text-text-secondary">Teams</span>.
             </p>
-            <div className="bg-white/80 px-6 py-4 rounded-2xl ">
+            <div className="bg-white/80 rounded-2xl ">
               <Button fullwidth={false} />
             </div>
           </div>
